@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+/* **********     Reset CSS     ********** */
+:root {
+    --main-font: sans-serif;
+    --font-size: 16px;
+    --container-width: 1200px;
+}
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif;
+}
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+.buttonMenu {
+    padding: 0.5em 1.5em;
+    border: 3px solid #008248;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    transition: .3s;
+    z-index: 1;
+    font-family: inherit;
+    color: #008248;
+}
+
+.buttonMenu::before {
+    content: '';
+    width: 0;
+    height: 300%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: #008248;
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+}
+
+.buttonMenu:hover::before {
+    width: 105%;
+}
+
+a .buttonMenu{
+    text-decoration: none;
+    color: black;
+}
+a:hover .buttonMenu{
+    color: white;
+    cursor: pointer;
+}
+
+
+
+/* ************ Menu Hamburguesa ********** */
+
+.header{
+    padding: 1rem;
+    width: 100%;
+    font-weight: 700;
+}
+.header_container{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1600px;
+}
+
+.header_izq{
+    display: flex;
+}
+.header_izq img{
+    width: 50px;
+}
+.header_izq ul{
+    display: flex;
+}
+.header_izq ul li{
+    list-style: none;
+}
+.header_izq ul li a{
+    text-decoration: none;
+    color: black;
+    margin-left: 15px;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color:#008248;
+    transform: scaleX(0);
+    transform-origin: 0 0;
+    transition: transform 0.3s ease;
+}
+.header_izq ul li a:hover .underline{
+    transform: scaleX(1);
+}
+
+.header_der{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1e3932;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 30px;
+}
+.header_der svg{
+    color: white;
+}
+
+/* title */
+
+.title{
+    background-color: #1e3932;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 50px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+.title p, .title h1{
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* ********** Sections ************ */
+
+.section{
+    padding: 2rem;
+    padding-top: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 1200px;
+    min-height: 90vh;
+    text-align: center;
+}
+
+/* Inicio */
+
+.sectionColorContainer{
+    background-color: #d4e9e2;
+}
+
+.inicio{
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.inicio_info{
+    max-width: 60%;
+}
+.inicio_info h2{
+    font-size: 50px;
+    font-weight: 800;
+}
+.inicio_info p{
+    font-size: 18px;
+}
+
+
+/* Section SobreNosotros */
+.sobreNosotros h2{
+    font-size: 50px;
+    font-weight: 800;   
+}
+.sobreNosotros p{
+    font-size: 20px;
+}
+
+
+.marcas {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 5rem 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(to top, rgba(197, 177, 153, 0.8), rgba(197, 177, 153, 0.5)), url("../assets/img/marcas/fondo.jpg");
+    border-top: 0.1px solid rgba(204, 198, 198, 0.4);
+    box-shadow: 0px 1px 4px 2px #000;
+    border-bottom: 3px solid #000;
+}
+
+.marcas img {
+    max-width: 10rem;
+    padding: 0 0.5rem;
+    animation: slider 30s linear infinite;
+}
+
+/*Animacion section marcas */
+@keyframes slider {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-250px);
+    }
+}
