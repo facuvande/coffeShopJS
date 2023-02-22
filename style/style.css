@@ -204,11 +204,11 @@ a:hover .buttonMenu{
 
 
 /* Section SobreNosotros */
-.sobreNosotros h2{
+.sobreNosotros h2, .contacto h2{
     font-size: 50px;
     font-weight: 800;   
 }
-.sobreNosotros p{
+.sobreNosotros p, .contacto p{
     font-size: 20px;
 }
 
@@ -240,4 +240,41 @@ a:hover .buttonMenu{
     100% {
         transform: translateX(-250px);
     }
+}
+
+/* Section Contacto */
+
+.redes{
+    margin-top: 100px;
+}
+
+.redes a{
+    color: black;
+    font-size: 50px;
+    margin-right: 26px;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    transition: .5s;
+}
+.redes a:hover{
+    transition: .5s;
+    color: #1e3932;
+}
+
+/* Section Footer */
+
+footer{
+    background-color: #1e3932;
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+footer h3{
+    font-size: 30px;
+}
+footer a{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
 }
