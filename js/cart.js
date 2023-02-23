@@ -4,6 +4,8 @@ const $cantidadCart = document.getElementById('numero')
 const $contenedorCompra = document.getElementById('contenedorCompra')
 const $productosCompra = document.getElementById('productosCompra')
 const $btnEliminar = document.getElementsByClassName('noselect')
+const $total = document.getElementById('total')
+const $input = document.getElementById('search')
 
 let listadoCarrito = []
 
@@ -30,13 +32,14 @@ function showProducts(products){
         // Debemos iniciarla como vacia ya que sino marca error porque no esta inicializada
         $div.innerHTML = ""
         $div.innerHTML += `
-        <img src="${el.img}" alt="${el.description}">
+        <img src="${el.img}" alt="${el.variedad}">
         <h2>${el.marca}</h2>
         <p class="description">${el.variedad}</p>
         <p class="price">$ ${el.precio}</p>
         <button id="comprar">Comprar</button>
         `
         $productsContainer.appendChild($div)
+
     })
 }
 
@@ -140,14 +143,46 @@ function mostrarHtml(){
         `
 
         $productosCompra.appendChild($divCart)
+        actualizarTotal();
     })
 }
 
 function limpiarHtml(){
     (listadoCarrito.length === 0) ? $productosCompra.innerHTML = `<p class="noProducts">No tienes productos &#128557;</p>` : $productosCompra.innerHTML = ``;
-    
+    actualizarTotal();
 }
 
 function actualizarNumeroCart(){
     $cantidadCart.innerHTML = listadoCarrito.length
 }
+
+function actualizarTotal(){
+    let total = 0;
+    listadoCarrito.forEach((el) =>{
+        if(el.cantidad > 1){
+            total += Number(el.price.replace("$", "")) * el.cantidad
+        }else{
+            total += Number(el.price.replace("$", ""))
+        }
+    })
+    
+    $total.innerText = `Total: $ ${total}`
+
+}
+
+$input.addEventListener('input', (e) =>{
+    const searchValue = $input.value.toLowerCase();
+    const $product = document.querySelectorAll('.product')
+    
+    $product.forEach((product) => {
+        const productName = product.querySelector('h2').textContent.toLowerCase();
+
+        if(!productName.includes(searchValue)){
+            product.style.display = 'none';
+        }else{
+            product.style.display = 'block';
+        }
+    })
+    
+    
+})

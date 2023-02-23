@@ -2,7 +2,7 @@
    {
       "id": 1,
       "img": "./assets/img/productos/cm_brasil.png",
-      "marca": "Café Martinez",
+      "marca": "Cafe Martinez",
       "variedad": "Brasil 250grs",
       "precio": 950,
       "filtro": "cm",
@@ -11,7 +11,7 @@
    {
       "id": 2,
       "img": "./assets/img/productos/cm_colombia.png",
-      "marca": "Café Martinez",
+      "marca": "Cafe Martinez",
       "variedad": "Colombia 250grs",
       "precio": 980,
       "filtro": "cm",
@@ -20,7 +20,7 @@
    {
       "id": 3,
       "img": "./assets/img/productos/cm_decaf.png",
-      "marca": "Café Martinez",
+      "marca": "Cafe Martinez",
       "variedad": "Decaf 250grs",
       "precio": 1050,
       "filtro": "cm",
@@ -29,7 +29,7 @@
    {
       "id": 4,
       "img": "./assets/img/productos/cm_italiano.png",
-      "marca": "Café Martinez",
+      "marca": "Cafe Martinez",
       "variedad": "Italiano 250grs",
       "precio": 980,
       "filtro": "cm",
@@ -38,7 +38,7 @@
    {
       "id": 5,
       "img": "./assets/img/productos/cm_selecto.png",
-      "marca": "Café Martinez",
+      "marca": "Cafe Martinez",
       "variedad": "Selecto 250grs",
       "precio": 1100,
       "filtro": "cm",
@@ -47,7 +47,7 @@
    {
       "id": 6,
       "img": "./assets/img/productos/cm_suave.png",
-      "marca": "Café Martinez",
+      "marca": "Cafe Martinez",
       "variedad": "Suave 250grs",
       "precio": 750,
       "filtro": "cm",
@@ -146,7 +146,7 @@
    {
       "id": 17,
       "img": "./assets/img/productos/cm_lungo_intenso_cap.png",
-      "marca": "Café Martinez",
+      "marca": "Cafe Martinez",
       "variedad": "Lungo Intenso x 10 u.",
       "precio": 1230,
       "filtro": "cm",
@@ -155,7 +155,7 @@
    {
       "id": 18,
       "img": "./assets/img/productos/cm_espresso_intenso_cap.png",
-      "marca": "Café Martinez",
+      "marca": "Cafe Martinez",
       "variedad": "Espreso Intenso x 10 u.",
       "precio": 1185,
       "filtro": "cm",
@@ -164,7 +164,7 @@
    {
       "id": 19,
       "img": "./assets/img/productos/cm_lungo_suave_cap.png",
-      "marca": "Café Martinez",
+      "marca": "Cafe Martinez",
       "variedad": "Lungo Suave x 10 u.",
       "precio": 1200,
       "filtro": "cm",
@@ -173,7 +173,7 @@
    {
       "id": 20,
       "img": "./assets/img/productos/cm_espresso_suave_cap.png",
-      "marca": "Café Martinez",
+      "marca": "Cafe Martinez",
       "variedad": "Espresso Suave x 10 u.",
       "precio": 1200,
       "filtro": "cm",
@@ -182,7 +182,7 @@
    {
       "id": 21,
       "img": "./assets/img/productos/cm_vainilla_cap.png",
-      "marca": "Café Martinez",
+      "marca": "Cafe Martinez",
       "variedad": "Vainilla x 10 u.",
       "precio": 1450,
       "filtro": "cm",
@@ -191,7 +191,7 @@
    {
       "id": 22,
       "img": "./assets/img/productos/cm_brasil_cap.png",
-      "marca": "Café Martinez",
+      "marca": "Cafe Martinez",
       "variedad": "Brasil x 10 u.",
       "precio": 1400,
       "filtro": "cm",
@@ -201,7 +201,7 @@
       "id": 23,
       "img": "./assets/img/productos/dolce_cafe_au_lait_cap.png",
       "marca": "Dolce Gusto",
-      "variedad": "Café con Leche x 16 u.",
+      "variedad": "Cafe con Leche x 16 u.",
       "precio": 1050,
       "filtro": "dolce_gusto",
       "tipo": "capsula"
@@ -237,7 +237,7 @@
       "id": 27,
       "img": "./assets/img/productos/cabrales_cafe_leche_cap.png",
       "marca": "Cabrales",
-      "variedad": "Café con Leche x 12 u.",
+      "variedad": "Cafe con Leche x 12 u.",
       "precio": 1250,
       "filtro": "cabrales",
       "tipo": "capsula"
