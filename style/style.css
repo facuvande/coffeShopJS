@@ -564,7 +564,7 @@ input:-webkit-autofill:active {
     }
     .product{
         height: 480px;
-        width: 500px;
+        width: 100%;
     }
     .products{
         justify-items: center;
