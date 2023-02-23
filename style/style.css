@@ -788,6 +788,16 @@ input:-webkit-autofill:active {
     justify-content: space-between
 }
 
+@media screen and (max-width: 918px){
+    .productosCompra img{
+        width: 30%;
+    }
+    .productosCompra > div{
+        align-items: center;
+    }
+}
+
+
 .total{
     z-index: 4;
     display: flex;
