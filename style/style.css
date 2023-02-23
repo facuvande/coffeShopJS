@@ -870,7 +870,7 @@ input:-webkit-autofill:active {
         width: 100%;
         display: flex;
         justify-content: center;
-        align-content: space-between;
+        align-content: center;
         flex-direction: row;
     }
     .contenedorCompra .buttons button{
