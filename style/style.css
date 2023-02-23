@@ -243,6 +243,14 @@ a:hover .buttonMenu{
     font-weight: 700;
 }
 
+@media screen and (max-width: 620px){
+    .title{
+        display: flex;
+        text-align: center;
+    }
+}
+
+
 /* ********** Sections ************ */
 
 .section{
@@ -282,6 +290,12 @@ a:hover .buttonMenu{
     font-size: 18px;
 }
 
+@media screen and (max-width: 620px){
+    .inicio{
+        display: flex;
+        flex-direction: column;
+    }
+}
 
 /* Section SobreNosotros */
 .sobreNosotros h2, .contacto h2{
