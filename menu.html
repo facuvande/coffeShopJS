@@ -6,129 +6,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Libreria https://toggles.dev/classic -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/theme-toggles@4.10.1/css/classic.min.css">
+    <!-- Toastify -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/3756f86c62.js" crossorigin="anonymous"></script>
     <!-- Estilos Generales -->
     <link rel="stylesheet" href="./style/style.css">
-    <title>Coffe Shop</title>
+    <title>Coffe Shop | Menu</title>
 </head>
 <body>
     <header class="header">
         <div class="header_container">
             <div class="header_izq">
-                <a href="#"><img src="./assets/img/logo_starbucks.png" alt="Logo Starbucks"></a>
+                <a href="./index.html"><img src="./assets/img/logo_starbucks.png" alt="Logo Starbucks"></a>
                 <ul>
                     <li><a href="">Menu
+                        <span class="underline isMenuActive"></span>
+                    </a></li>
+                    <li><a href="./index.html#sobreNosotros">Sobre Nosotros
                         <span class="underline"></span>
                     </a></li>
-                    <li><a href="#sobreNosotros">Sobre Nosotros
-                        <span class="underline"></span>
-                    </a></li>
-                    <li><a href="#contacto">Contacto
+                    <li><a href="./index.html#contacto">Contacto
                         <span class="underline"></span>
                     </a></li>
                 </ul>
             </div>
             <div class="header_der">
-                <button id="theme-toggle" class="theme-toggle" type="button" title="Toggle theme" aria-label="Toggle theme">
-                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="3em" height="3em" fill="currentColor" stroke-linecap="round" class="theme-toggle__classic" viewBox="0 0 32 32">
-                        <clipPath id="theme-toggle__classic__cutout">
-                            <path d="M0-5h30a1 1 0 0 0 9 13v24H0Z" />
-                        </clipPath>
-                        <g clip-path="url(#theme-toggle__classic__cutout)">
-                            <circle cx="16" cy="16" r="9.34" />
-                            <g stroke="currentColor" stroke-width="1.5">
-                                <path d="M16 5.5v-4" />
-                                <path d="M16 30.5v-4" />
-                                <path d="M1.5 16h4" />
-                                <path d="M26.5 16h4" />
-                                <path d="m23.4 8.6 2.8-2.8" />
-                                <path d="m5.7 26.3 2.9-2.9" />
-                                <path d="m5.8 5.8 2.8 2.8" />
-                                <path d="m23.4 23.4 2.9 2.9" />
+                <div class="shopping">
+                    <i class="fa-solid fa-cart-shopping carrito"></i>
+                    <div id="numero" class="disenoNumero">0</div>
+                </div>
+                <div class="darkLight">
+                    <button id="theme-toggle" class="theme-toggle" type="button" title="Toggle theme" aria-label="Toggle theme">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="3em" height="3em" fill="currentColor" stroke-linecap="round" class="theme-toggle__classic" viewBox="0 0 32 32">
+                            <clipPath id="theme-toggle__classic__cutout">
+                                <path d="M0-5h30a1 1 0 0 0 9 13v24H0Z" />
+                            </clipPath>
+                            <g clip-path="url(#theme-toggle__classic__cutout)">
+                                <circle cx="16" cy="16" r="9.34" />
+                                <g stroke="currentColor" stroke-width="1.5">
+                                    <path d="M16 5.5v-4" />
+                                    <path d="M16 30.5v-4" />
+                                    <path d="M1.5 16h4" />
+                                    <path d="M26.5 16h4" />
+                                    <path d="m23.4 8.6 2.8-2.8" />
+                                    <path d="m5.7 26.3 2.9-2.9" />
+                                    <path d="m5.8 5.8 2.8 2.8" />
+                                    <path d="m23.4 23.4 2.9 2.9" />
+                                </g>
                             </g>
-                        </g>
-                    </svg>
-                </button>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
     </header>
+    <div id="contenedorCompra" class="contenedorCompra">
+        <div class="informacionCompra" id="informacionCompra">
+            <h2>Carrito</h2>
+            <p class="x" id="x">x</p>
+        </div>
+
+        <div class="productosCompra" id="productosCompra">
+            <p class="noProducts">No tienes productos &#128557;</p>
+        </div>
+        <div class="total" id="total"></div>
+        <div class="buttons">
+            <button class="limpiar">Limpiar Carrito</button>
+            <button class="finalizar">Finalizar Compra</button>
+        </div>
+    </div>
     <div class="title">
         <h1>Coffe Shop</h1>
         <p>Sitio desarrollado por Facundo Vandecaveye</p>
     </div>
-    <main>
-        <div class="sectionColorContainer">
-            <section class="section inicio" id="inicio">
-                <div class="inicio_info">
-                    <h2>El mejor cafe de la zona!</h2>
-                    <p>Disfruta del mejor café en casa con nuestra selección exclusiva de granos de café Starbucks. Desde suave a intenso, encuentra el perfecto para ti.</p>
-                    <a href="#"><button class="buttonMenu">Menu</button></a>
-                </div>
-                <div class="inicio_img">
-                    <img src="./assets/img/cafeMain.png" alt="Imagen de cafe">
-                </div>
-            </section>
-        </div>
-        <section class="section sobreNosotros" id="sobreNosotros">
-            <h2>Sobre Nosotros</h2>
-            <p>En nuestro sitio ecommerce, ofrecemos una amplia selección de granos de café de las mejores marcas y cafeterías famosas del mundo. Trabajamos con expertos del café para asegurarnos de que cada taza que prepares sea auténtica y única. Además, ofrecemos envíos rápidos para que puedas disfrutar de tu café fresco lo más rápido posible. Desde granos suaves y equilibrados hasta intensos y oscuros, tenemos todo lo que necesitas para preparar tu café perfecto en casa. Explora nuestro sitio ecommerce hoy y descubre el mejor café del mundo. </p>
-
-            <a href="#"><button class="buttonMenu">Menu</button></a>
-            
-            <!-- MARCAS -->
-            <section class="marcas"> 
-                <div class="slide">
-                    <img src="./assets/img/marcas/arlistan.jpg" alt="arlistan">    
-                </div>
-                <div class="slide">
-                    <img src="./assets/img/marcas/nespresso.png" alt="nespresso">
-                </div>
-                <div class="slide">
-                    <img src="./assets/img/marcas/bonafide.png" alt="bonafide">   
-                </div>
-                <div class="slide">
-                    <img src="./assets/img/marcas/starbucks.png" alt="starbucks">  
-                </div>
-                <div class="slide">
-                    <img src="./assets/img/marcas/la_virginia.png" alt="la_virginia"> 
-                </div>
-                <div class="slide">
-                <img src="./assets/img/marcas/cafe_illy.png" alt="illy">  
-                </div>
-                <div class="slide">
-                    <img src="./assets/img/marcas/dolce_gusto.png" alt="dolce_gusto">
-                </div>
-                <div class="slide">
-                    <img src="./assets/img/marcas/cafe_martinez.png" alt="cafe_martinez">
-                </div>
-                <div class="slide">
-                    <img src="./assets/img/marcas/juan_valdez.png" alt="juan_valdez">
-                </div>
-                <div class="slide">
-                    <img src="./assets/img/marcas/morenita.png" alt="la_morenita">
-                </div>
-                <div class="slide">
-                    <img src="./assets/img/marcas/cabrales.png" alt="cabrales">
-                </div>
-                <div class="slide">
-                    <img src="./assets/img/marcas/5_hispanos.png" alt="5_hispanos">
-                </div>
-                <div class="slide">
-                    <img src="./assets/img/marcas/nescafe.png" alt="nescafe">
-                </div>      
-            </section> 
-        </section>
-        <section class="sectionColorContainer">
-            <section class="section contacto" id="contacto">
-                <h2>Contactanos</h2>
-                <p>Puedes contactarnos mediante nuestras redes sociales</p>
-                <div class="redes">
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-            </section>
+    <main class="menuMain">
+        <h2>Menu</h2>
+        <section class="section products_container">
+            <form class="form">
+                <label for="search">
+                    <input class="input" type="text" required="" placeholder="Buscar Producto" id="search">
+                    <div class="fancy-bg"></div>
+                    <div class="search">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" class="r-14j79pv r-4qtqp9 r-yyyyoo r-1xvli5t r-dnmrzs r-4wgw6l r-f727ji r-bnwqim r-1plcrui r-lrvibr">
+                            <g>
+                                <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
+                            </g>
+                        </svg>
+                    </div>
+                    <button class="close-btn" type="reset">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </label>
+            </form>
+            <div class="products" id="productsContainer">
+                
+            </div>
         </section>
     </main>
     <footer>
@@ -137,5 +112,7 @@
     </footer>
 
     <script src="./js/index.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./js/cart.js"></script>
 </body>
 </html>

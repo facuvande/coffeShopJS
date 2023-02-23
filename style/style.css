@@ -130,6 +130,9 @@ a:hover .buttonMenu{
 .header_izq ul li a:hover .underline{
     transform: scaleX(1);
 }
+.underline.isMenuActive{
+    transform: scaleX(1);
+}
 
 .header_der{
     display: flex;
@@ -143,6 +146,14 @@ a:hover .buttonMenu{
 }
 .header_der svg{
     color: white;
+}
+
+.header_der .darkLight svg{
+    color: white;
+}
+.header_der .shopping{
+    position: absolute;
+    left: 85vw;
 }
 
 /* title */
@@ -278,3 +289,440 @@ footer a{
     font-size: 20px;
     text-decoration: none;
 }
+
+
+/* MENU.html */
+
+.menuMain{
+    background-color: #d4e9e2;
+}
+.menuMain h2{
+    margin-top: 0px;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* this is a recreation of twitter search in css */
+.form {
+    --input-text-color: #fff;
+    --input-bg-color: #283542;
+    --focus-input-bg-color: transparent;
+    --text-color: #949faa;
+    --active-color: #1b9bee;
+    --width-of-input: 200px;
+    --inline-padding-of-input: 1.2em;
+    --gap: 0.9rem;
+}
+
+/* form style */
+.form {
+    margin-bottom: 30px;
+    font-size: 0.9rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    width: var(--width-of-input);
+    position: relative;
+    isolation: isolate;
+}
+
+/* a fancy bg for showing background and border when focus. */
+.fancy-bg {
+    position: absolute;
+    width: 100%;
+    inset: 0;
+    background: var(--input-bg-color);
+    border-radius: 30px;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+/* label styling */
+
+label {
+    width: 100%;
+    padding: 0.8em;
+    height: 40px;
+    padding-inline: var(--inline-padding-of-input);
+    display: flex;
+    align-items: center;
+}
+
+.search,.close-btn {
+    position: absolute;
+}
+
+/* styling search-icon */
+.search {
+    fill: var(--text-color);
+    left: var(--inline-padding-of-input);
+}
+
+/* svg -- size */
+svg {
+    width: 17px;
+    display: block;
+}
+
+  /* styling of close button */
+.close-btn {
+    border: none;
+    right: var(--inline-padding-of-input);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 0.1em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--active-color);
+    opacity: 0;
+    visibility: hidden;
+}
+
+  /* styling of input */
+.input {
+    /* color: var(--input-text-color); */
+    color: black;
+    width: 100%;
+    margin-inline: min(2em,calc(var(--inline-padding-of-input) + var(--gap)));
+    background: none;
+    border: none;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.input::placeholder {
+    color: var(--text-color)
+}
+
+/* input background change in focus */
+.input:focus ~ .fancy-bg {
+    border: 1px solid var(--active-color);
+    background: var(--focus-input-bg-color);
+}
+
+/* search icon color change in focus */
+.input:focus ~ .search {
+    fill: var(--active-color);
+}
+
+/* showing close button when typing */
+.input:valid ~ .close-btn {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* this is for the default background in input,when selecting autofill options -- you can remove this code if you do not want to override the browser style.  */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+    -webkit-transition-delay: 9999s;
+}
+
+.products_container{
+    background-color: white;
+    box-shadow: 6px 0px 25px 0px rgba(0, 0, 0, 1);
+    margin-bottom: 50px;
+}
+
+.products{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+}
+
+.product{
+    box-shadow:
+    0px 0px 2.4px -3px rgba(0, 0, 0, 0.129),
+    0px 0px 6.5px -3px rgba(0, 0, 0, 0.185),
+    0px 0px 15.7px -3px rgba(0, 0, 0, 0.241),
+    0px 0px 52px -3px rgba(0, 0, 0, 0.37);
+    border-radius: 5px;
+}
+.product img{
+    height: 50%;
+}
+.product h2{
+    font-size: 30px;
+    margin: 0;
+}
+.product .description{
+    margin: 0;
+    font-size: 20px;
+    font-weight: 300;
+}
+.product .price{
+    font-size: 25px;
+    font-weight: 600;
+}
+.product button{
+    background: black;
+    color: white;
+    font-size: 18px;
+    padding: 4px;
+    border-radius: 5%;
+}
+.product button:hover{
+    cursor: pointer;
+}
+
+/* Cart */
+.carrito{
+    width: 45px;
+    height: auto;
+    position: absolute;
+    cursor: pointer;
+    font-size: 30px;
+}
+/* Clase que anadimos a #numero con javascript cuando tenemos un producto */
+.disenoNumero {
+    padding: 10px;
+    background-color: #1e3932;
+    color: white;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+    position: relative;
+    top: -12px;
+
+    left: 30px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.contenedorCompra{
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0px;
+    background-color: rgba(51, 51, 51, 0.6);
+    flex-direction:column;
+    gap:35px;
+    transition: transform 0.3s ease;
+    /* De arriba */
+    transform: translate(0, -100%);
+}
+.contenedorCompra.isActive{
+    transform: translate(0, 0);
+}
+
+.informacionCompra{
+    width: 60%;
+    height: 70%;
+    background-color: #d4e9e2;
+    border-radius: 25px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+}
+
+.informacionCompra h2{
+    color: black;
+    font-weight: 600;
+    margin: 50px 0px 0px 50px;
+    font-size: 32px;
+    width: 100%;
+}
+
+.informacion p{
+    font-weight: 600;
+}
+
+.informacion button {
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: red;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+    background: #e62222;
+}
+
+.informacion button, .informacion button span {
+    transition: 200ms;
+}
+
+.informacion button .text {
+    transform: translateX(35px);
+    color: white;
+    font-weight: bold;
+}
+
+.informacion button .icon {
+    position: absolute;
+    border-left: 1px solid #c41b1b;
+    transform: translateX(110px);
+    height: 30px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.informacion button svg {
+    width: 15px;
+    fill: #eee;
+}
+
+.informacion button:hover {
+    background: #ff3636;
+}
+
+.informacion button:hover .text {
+    color: transparent;
+}
+
+.informacion button:hover .icon {
+    width: 150px;
+    border-left: none;
+    transform: translateX(0);
+}
+
+.informacion button:focus {
+    outline: none;
+}
+
+.informacion button:active .icon svg {
+    transform: scale(0.8);
+}
+.x{
+    padding-top: 30px;
+    padding-right: 30px;
+    cursor: pointer;
+    font-size: 24px;
+    color: red;
+    font-weight: 800;
+}
+
+.productosCompra{
+    font-size: 17px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 50%;
+    height: 40%;
+    overflow-y: auto;
+    margin-top: 80px;
+}
+
+
+/* Este es el div que agregamos con js */
+
+.productosCompra > div {
+    margin: 0px 45px;
+    padding: 20px 0px;
+    width: auto;
+    border-bottom: 1px dotted black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.productosCompra::-webkit-scrollbar{
+    width: 7px;
+    background-color: #141C29;
+    border-radius: 5px;
+}
+
+.productosCompra::-webkit-scrollbar-thumb{
+    background: white ;
+    border-radius: 3px;
+}
+
+.productosCompra img{
+    width: 20%;
+    height: auto;
+    margin-right:10px;
+    border-bottom: none ;
+    cursor: pointer;
+}
+.productosCompra .informacion{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between
+}
+
+.total{
+    z-index: 4;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 150px;
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.total span{
+    font-weight: 300;
+}
+
+.contenedorCompra .buttons{
+    z-index: 6;
+}
+
+.contenedorCompra .buttons button{
+    background-color: #000000;
+    width: 300px;
+    height: 45px;
+    border-radius: 10px ;
+    border: none;
+    color: white;
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.contenedorCompra .buttons button:hover{
+    cursor: pointer;
+}
+.contenedorCompra .buttons .limpiar:hover{
+    cursor: pointer;
+    background-color: red;
+}
+
+.none>div,
+.none button, 
+.none p{
+    width: 0px;
+    height: 0px;
+    font-size: 0px;
+    border: 0px;
+}
+
+.soldOut{
+    background-color: red;
+    padding: 7px 10px;
+    border-radius: 10px;
+}
+
+.noProducts{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+}
+
