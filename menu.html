@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/theme-toggles@4.10.1/css/classic.min.css">
     <!-- Toastify -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <!-- Hamburguer -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css" integrity="sha512-+mlclc5Q/eHs49oIOCxnnENudJWuNqX5AogCiqRBgKnpoplPzETg2fkgBFVC6WYUVxYYljuxPNG8RE7yBy1K+g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/3756f86c62.js" crossorigin="anonymous"></script>
     <!-- Estilos Generales -->
@@ -19,17 +21,24 @@
         <div class="header_container">
             <div class="header_izq">
                 <a href="./index.html"><img src="./assets/img/logo_starbucks.png" alt="Logo Starbucks"></a>
-                <ul>
-                    <li><a href="">Menu
-                        <span class="underline isMenuActive"></span>
-                    </a></li>
-                    <li><a href="./index.html#sobreNosotros">Sobre Nosotros
-                        <span class="underline"></span>
-                    </a></li>
-                    <li><a href="./index.html#contacto">Contacto
-                        <span class="underline"></span>
-                    </a></li>
-                </ul>
+                <button class="panel-btn hamburger hamburger--emphatic" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+                <aside class="panel">
+                    <ul>
+                        <li><a id="linkBtn" href="">Menu
+                            <span class="underline isMenuActive"></span>
+                        </a></li>
+                        <li><a id="linkBtn" href="./index.html#sobreNosotros">Sobre Nosotros
+                            <span class="underline"></span>
+                        </a></li>
+                        <li><a id="linkBtn" href="./index.html#contacto">Contacto
+                            <span class="underline"></span>
+                        </a></li>
+                    </ul>
+                </aside>
             </div>
             <div class="header_der">
                 <div class="shopping">

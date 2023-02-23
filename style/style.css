@@ -523,6 +523,7 @@ input:-webkit-autofill:active {
     gap: 24px;
 }
 
+
 .product{
     box-shadow:
     0px 0px 2.4px -3px rgba(0, 0, 0, 0.129),
@@ -557,6 +558,23 @@ input:-webkit-autofill:active {
 .product button:hover{
     cursor: pointer;
 }
+@media screen and (max-width: 620px){
+    .products_container{
+        width: 96vw;
+    }
+    .product{
+        height: 480px;
+        width: 500px;
+    }
+    .products{
+        justify-items: center;
+    }
+    .form {
+        font-size: 2rem;
+        width: 100%;
+
+    }
+}
 
 /* Cart */
 .carrito{
@@ -564,17 +582,18 @@ input:-webkit-autofill:active {
     height: auto;
     position: absolute;
     cursor: pointer;
-    font-size: 30px;
+    font-size: 36px;
 }
+
 /* Clase que anadimos a #numero con javascript cuando tenemos un producto */
 .disenoNumero {
-    padding: 10px;
+    padding: 13px;
     background-color: #1e3932;
     color: white;
     border-radius: 100%;
     width: 20px;
     height: 20px;
-    font-size: 10px;
+    font-size: 15px;
     position: relative;
     top: -12px;
 
@@ -585,6 +604,23 @@ input:-webkit-autofill:active {
     align-items: center;
 }
 
+@media screen and (max-width: 918px){
+    .carrito{
+        left: -4vw;
+    }
+    .disenoNumero{
+        left: -1vw;
+    }
+}
+
+@media screen and (max-width: 620px){
+    .carrito{
+        left: -35vw;
+    }
+    .disenoNumero{
+        left: -30vw;
+    }
+}
 
 .contenedorCompra{
     z-index: 10;
@@ -616,6 +652,7 @@ input:-webkit-autofill:active {
     justify-content: flex-start;
     position: fixed;
 }
+
 
 .informacionCompra h2{
     color: black;
@@ -788,6 +825,35 @@ input:-webkit-autofill:active {
     background-color: red;
 }
 
+@media screen and (max-width: 918px){
+    .informacionCompra{
+        width: 90%;
+        height: 90%;
+    }
+    .contenedorCompra .buttons button{
+        background-color: #000000;
+        width: 100%;
+        margin-top: 5px;
+        height: 45px;
+        border-radius: 10px ;
+        border: none;
+        color: white;
+        font-size: 17px;
+        font-weight: 300;
+    }
+    .productosCompra{
+        font-size: 17px;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        width: 80%;
+        height: 60%;
+        overflow-y: auto;
+        margin-top: 80px;
+    }
+}
 .none>div,
 .none button, 
 .none p{
