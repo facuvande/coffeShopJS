@@ -134,27 +134,6 @@ a:hover .buttonMenu{
     transform: scaleX(1);
 }
 
-.header_der{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #1e3932;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    padding: 30px;
-}
-.header_der svg{
-    color: white;
-}
-
-.header_der .darkLight svg{
-    color: white;
-}
-.header_der .shopping{
-    position: relative;
-    left: -5vw;
-}
 
 /* ************ Menu Hamburguesa ********** */
 
@@ -224,6 +203,7 @@ a:hover .buttonMenu{
         background-color: #008248;
     }
 }
+
 
 /* title */
 
