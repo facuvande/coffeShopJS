@@ -135,6 +135,11 @@ a:hover .buttonMenu{
 }
 
 
+.header_der .shopping{
+    position: relative;
+    left: -5vw;
+}
+
 /* ************ Menu Hamburguesa ********** */
 
 .panel-btn{

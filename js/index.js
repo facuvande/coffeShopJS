@@ -1,9 +1,3 @@
-const $toggle = document.getElementById('theme-toggle');
-
-$toggle.addEventListener("click", (e) =>{
-    $toggle.classList.toggle("theme-toggle--toggled")
-})
-
 const $panelBtn = document.querySelector('.panel-btn');
 const $aside = document.querySelector('.panel')
 

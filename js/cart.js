@@ -84,11 +84,29 @@ document.addEventListener("click", (e) =>{
         listadoCarrito = []
         limpiarHtml()
         actualizarNumeroCart();
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Carrito limpiado correctamente',
+            showConfirmButton: false,
+            timer: 1500
+        })
+    }
+
+    if(e.target.matches('.finalizar')){
+        listadoCarrito = []
+        limpiarHtml()
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Gracias por tu compra!',
+            showConfirmButton: false,
+            timer: 1500
+          })
     }
 });
 
 function addProductToCart(product){
-    console.log(product)
     const infoProduct = {
         id: Number(product.getAttribute('data-id')),
         img: product.querySelector('img').src,
@@ -97,7 +115,7 @@ function addProductToCart(product){
         price: product.querySelector('.price').textContent,
         cantidad: 1
     }
-    console.log(infoProduct.id)
+
     const corroborarExistencia = listadoCarrito.find(el => el.id === infoProduct.id)
     if(corroborarExistencia){
         listadoCarrito.map(el =>{
@@ -111,7 +129,6 @@ function addProductToCart(product){
         actualizarNumeroCart();
         mostrarHtml()
     }
-    console.log(listadoCarrito)
 }
 
 function deleteProductToCart(id){
@@ -148,6 +165,7 @@ function mostrarHtml(){
 }
 
 function limpiarHtml(){
+    
     (listadoCarrito.length === 0) ? $productosCompra.innerHTML = `<p class="noProducts">No tienes productos &#128557;</p>` : $productosCompra.innerHTML = ``;
     actualizarTotal();
 }
